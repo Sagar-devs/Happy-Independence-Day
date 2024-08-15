@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+h1 {
+    color: #ff9933;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #006400;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #228b22;
+}
+
+.flag-container {
+    position: relative;
+    height: 400px;
+    width: 150px;
+    margin: 10px auto;
+    display: none;
+}
+
+#flagpole {
+    position: absolute;
+    height: 400px;
+    width: 5px;
+    background-color: #8b4513;
+    left: 0%;
+    transform: translateX(-50%);
+}
+
+#flag {
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    border: 1px solid black;
+    overflow: hidden;
+    animation: hoist 4s forwards, wave 2s infinite;
+}
+
+.saffron, .white, .green {
+    width: 100%;
+}
+
+.saffron {
+    background-color: #ff9933;
+    height: 33px;
+}
+
+.white {
+    background-color: white;
+    height: 33px;
+    position: relative;
+}
+
+.green {
+    background-color: #138808;
+    height: 33px;
+}
+
+.ashoka-chakra {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #000080;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Animation */
+.hoist-animation {
+    animation: hoist 4s forwards;
+}
+
+@keyframes hoist {
+    from {
+        top: 350px;
+    }
+    to {
+        top: 50px;
+    }
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    25% {
+        transform: translateX(-48%) rotate(2deg);
+    }
+    50% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    75% {
+        transform: translateX(-52%) rotate(-2deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+}
